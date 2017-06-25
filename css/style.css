@@ -1,0 +1,117 @@
+
+* {font-family: sans-serif;}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  width: calc(100% - 170px);
+  max-width: 80%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+#title {
+  position: fixed;
+  bottom: 10px;
+  right: 45px;
+  text-align: center;
+  font-size: 13vmin;
+  font-weight: bold;
+  color: black;
+  text-shadow: .5vmin .5vmin 1px grey;
+}
+
+#sidePanel {
+  position: absolute;
+  top: 0;
+  background-color: grey;
+  width: 20%;
+  min-width: 170px;
+  height: 100%;
+}
+
+#lineSelectionLabel{
+  margin: 4px 0 0 0;
+}
+
+#lineSelection {
+  height: 140px;
+  text-align: center;
+  overflow-y: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.lineSelector{
+  display: inline-block;
+  background-color: darkGrey;
+  border: 2px;
+  border-style: solid;
+  width: 48%;
+  box-sizing: border-box;
+  height: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+#stopListWrapper {
+  height: calc(100% - 140px);
+  direction: rtl;
+  overflow-y: scroll;
+}
+
+#stopList{
+  direction: ltr;
+}
+
+@media only screen and (max-width: 500px) {
+  #map {
+    height: calc(100% - 180px);
+    width: 100%;
+    max-width: 100%
+  }
+  #title {
+    position: fixed;
+    bottom: 190px;
+  }
+  #sidePanel {
+    top: auto;
+    bottom: 0;
+    height: 180px;
+  }
+  #stopListWrapper {
+    background-color: inherit;
+    direction: ltr;
+    width: calc(100% - 170px);
+    height: 180px;
+    position: fixed;
+    bottom: 0;
+    right:0;
+  }
+}
+
+.listing {
+  border: 2px;
+  border-style: solid;
+  padding: 5px;
+}
+
+.green {background-color: #6BBD46}
+.red {background-color: #FC1921}
+.gold {background-color: #FFB300}
+.purple {background-color: #9561A8}
+.expo {background-color: #4CC7E8}
+.blue {background-color: #2461AA}
+
+
+.removed {
+  display: none;
+}
