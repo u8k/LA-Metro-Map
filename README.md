@@ -1,6 +1,6 @@
 # LA Metro Map
 
-<a href="https://u8k.github.io/laMetroMap/">LIVE LINK</a>
+<a href="https://u8k.github.io/la-metro-map/">LIVE LINK</a>
 
 This is a project for Udacity's FullStack NanoDegree program.
 
