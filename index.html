@@ -8,33 +8,38 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div id="map"></div>
+    <main id="map"></main>
 
-   <div id="title">LA<br>METRO</div>
+    <header id="title">LA<br>METRO</header>
 
-    <div id="sidePanel">
-      <div id="lineSelection">
-        <h2 id="lineSelectionLabel">line selection:</h2>
-        <div class="lineSelector red">red <input type="checkbox" data-bind="checked: red"></div>
-        <div class="lineSelector purple">purple <input type="checkbox" data-bind="checked: purple"></div>
-        <div class="lineSelector blue">blue <input type="checkbox" data-bind="checked: blue"></div>
-        <div class="lineSelector gold">gold <input type="checkbox" data-bind="checked: gold"></div>
-        <div class="lineSelector green">green <input type="checkbox" data-bind="checked: green"></div>
-        <div class="lineSelector expo">expo <input type="checkbox" data-bind="checked: expo"></div>
-        <button class="lineSelector" data-bind="click: showAll">all</button>
-        <button class="lineSelector" data-bind="click: hideAll">none</button>
+    <nav id="side-panel">
+      <div id="line-selection">
+        <h2 id="line-selection-label">line selection:</h2>
+        <div class="line-selector red">red <input type="checkbox" data-bind="checked: red"></div>
+        <div class="line-selector purple">purple <input type="checkbox" data-bind="checked: purple"></div>
+        <div class="line-selector blue">blue <input type="checkbox" data-bind="checked: blue"></div>
+        <div class="line-selector gold">gold <input type="checkbox" data-bind="checked: gold"></div>
+        <div class="line-selector green">green <input type="checkbox" data-bind="checked: green"></div>
+        <div class="line-selector expo">expo <input type="checkbox" data-bind="checked: expo"></div>
+        <button class="line-selector" data-bind="click: showAll">all</button>
+        <button class="line-selector" data-bind="click: hideAll">none</button>
       </div>
 
-      <div id="stopListWrapper">
-        <div id="stopList"></div>
+      <div id="stop-list-wrapper">
+        <div id="stop-list" data-bind="foreach: currentStops">
+          <div data-bind="if: condition">
+            <div data-bind="text: name, css: classNames, click: () => {selectStop(markerReference)}">
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </nav>
 
-    <script type='text/javascript' src='js/knockout-3.4.2.js'></script>
-    <script type="text/javascript" src="js/data.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src='js/knockout-3.4.2.js'></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKfkxrK7ewp-QY1T7j5AkfGsW3Lc0HawY&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKfkxrK7ewp-QY1T7j5AkfGsW3Lc0HawY&callback=initMap" onerror="mapFailure()">
     </script>
   </body>
 </html>

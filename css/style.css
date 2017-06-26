@@ -1,7 +1,10 @@
 
-* {font-family: sans-serif;}
+* {
+  font-family: sans-serif;
+}
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -26,7 +29,7 @@ html, body {
   text-shadow: .5vmin .5vmin 1px grey;
 }
 
-#sidePanel {
+#side-panel {
   position: absolute;
   top: 0;
   background-color: grey;
@@ -35,11 +38,11 @@ html, body {
   height: 100%;
 }
 
-#lineSelectionLabel{
+#line-selection-label {
   margin: 4px 0 0 0;
 }
 
-#lineSelection {
+#line-selection {
   height: 140px;
   text-align: center;
   overflow-y: hidden;
@@ -49,7 +52,7 @@ html, body {
   justify-content: center;
 }
 
-.lineSelector{
+.line-selector {
   display: inline-block;
   background-color: darkGrey;
   border: 2px;
@@ -62,13 +65,13 @@ html, body {
   margin: 0px;
 }
 
-#stopListWrapper {
+#stop-list-wrapper {
   height: calc(100% - 140px);
   direction: rtl;
   overflow-y: scroll;
 }
 
-#stopList{
+#stop-list {
   direction: ltr;
 }
 
@@ -82,12 +85,12 @@ html, body {
     position: fixed;
     bottom: 190px;
   }
-  #sidePanel {
+  #side-panel {
     top: auto;
     bottom: 0;
     height: 180px;
   }
-  #stopListWrapper {
+  #stop-list-wrapper {
     background-color: inherit;
     direction: ltr;
     width: calc(100% - 170px);
@@ -104,13 +107,29 @@ html, body {
   padding: 5px;
 }
 
-.green {background-color: #6BBD46}
-.red {background-color: #FC1921}
-.gold {background-color: #FFB300}
-.purple {background-color: #9561A8}
-.expo {background-color: #4CC7E8}
-.blue {background-color: #2461AA}
+.green {
+  background-color: #6BBD46
+}
 
+.red {
+  background-color: #FC1921
+}
+
+.gold {
+  background-color: #FFB300
+}
+
+.purple {
+  background-color: #9561A8
+}
+
+.expo {
+  background-color: #4CC7E8
+}
+
+.blue {
+  background-color: #2461AA
+}
 
 .removed {
   display: none;
