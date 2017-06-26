@@ -152,6 +152,10 @@ function mapFailure() {
   alert("unable to establish connection with google maps");
 }
 
+function apiError() {
+  alert("unable to retrieve data from Wikipedia");
+}
+
 function apiCall(url, callback) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -159,9 +163,10 @@ function apiCall(url, callback) {
       var json = JSON.parse(xhttp.responseText);
       callback(json);
     } else if (this.readyState == 4) {
-      alert("unable to retrieve data from Wikipedia");
+      apiError();
     }
   }
   xhttp.open("GET", url, true);
+  xhttp.onerror = () => {apiError();}
   xhttp.send();
 }
