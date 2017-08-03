@@ -2,9 +2,14 @@
 
 <a href="https://u8k.github.io/la-metro-map/">LIVE LINK</a>
 
-This is a project for Udacity's FullStack NanoDegree program.
-
-To run your own instance of this code simply open the 'index.html' in a web browser.
+To run your own instance of this code,<br>
+You're going to have to change out my google API key on line 37 of 'index.html',<br>
+```
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key= YOUR API KEY &callback=initMap">
+    </script>
+```
+You can get your own key <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">here</a>.
 
 -----------------------
 
